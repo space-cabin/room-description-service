@@ -1,10 +1,15 @@
 const express = require('express');
 const db = require('./database/index.js');
+const path = require('path');
 
 const app = express();
 const PORT = 3000;
 
-app.get('/:id', (req, res) => {
+app.use(express.json());
+
+app.use('/:id', express.static(path.join(__dirname, '../public')));
+
+app.get('/listing/:id', (req, res) => {
   const { id } = req.params;
   const data = {};
   db.Descriptions.findOne({ listingId: id })
