@@ -1,6 +1,7 @@
 const express = require('express');
-const db = require('./database/index.js');
 const path = require('path');
+const db = require('./database/index.js');
+
 
 const app = express();
 const PORT = 3000;
