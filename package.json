@@ -14,17 +14,20 @@
     "seed": "node seed.js"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
     "faker": "^4.1.0",
     "mongoose": "^5.9.11",
-    "express": "^4.17.1"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
-    "axios": "^0.19.2",
     "babel-loader": "^8.1.0",
     "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-plugin-import": "^2.20.2",
@@ -32,9 +35,9 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "jest": "^25.5.2",
+    "jest-environment-enzyme": "^7.1.2",
+    "jest-enzyme": "^7.1.2",
     "nodemon": "^2.0.3",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   }
