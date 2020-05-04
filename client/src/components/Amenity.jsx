@@ -3,7 +3,7 @@ import React from 'react';
 const Amenity = (props) => {
   const { amenity } = props;
   return (
-    <div id="amenity">Stuff n Things</div>
+    <div id="amenity">Amenity Stuff n Things</div>
   );
 };
 
