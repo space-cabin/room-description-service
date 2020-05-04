@@ -5,15 +5,32 @@ const { connection } = mongoose;
 
 const { Schema } = mongoose;
 
+// {
+//   boolean: Boolean,
+//   emblem: String,
+//   title: String,
+//   text: String,
+// }
+
+const highlightSchema = new Schema({
+  boolean: Boolean,
+  emblem: String,
+  title: String,
+  text: String,
+});
+
 const DescriptionSchema = new Schema({
   listingId: Number,
+  Title: String,
   Location: String,
+  Highlights: [highlightSchema],
   Owner: String,
   Image: String,
   Occupancy: Number,
   Bedrooms: Number,
   Beds: Number,
   Bathrooms: Number,
+  Info: String,
   MoreInfo: String,
 });
 

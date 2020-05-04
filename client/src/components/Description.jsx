@@ -9,10 +9,9 @@ const Description = (props) => {
       <div>missing page</div>
     );
   }
-  const { Occupancy } = description;
-  const { Bathrooms } = description;
-  const { Bedrooms } = description;
-  const { Beds } = description;
+  const {
+    Occupancy, Bathrooms, Bedrooms, Beds,
+  } = description;
   let guests = '';
   let bathrooms = '';
   let bedrooms = '';
@@ -41,7 +40,7 @@ const Description = (props) => {
     <div className="overview">
       <div className="listing-title">
         <div className="title">
-          <div className="title-name">Some Name</div>
+          <div className="title-name">{description.Title}</div>
           <div className="location">{description.Location}</div>
         </div>
         <div className="owner">
@@ -72,7 +71,7 @@ const Description = (props) => {
         Some highlights
       </div>
       <hr className="info-break" />
-      <div className="description">Description Goes Here</div>
+      <div className="description">{description.Info}</div>
       <hr className="info-break" />
     </div>
   );
