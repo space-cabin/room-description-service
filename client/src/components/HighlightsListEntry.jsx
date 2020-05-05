@@ -1,6 +1,7 @@
 import React from 'react';
 
 const HighlightsListEntry = (props) => {
+  // eslint-disable-next-line react/prop-types
   const { emblem, text, title } = props;
   if (emblem === undefined || text === undefined || title === undefined) {
     return (

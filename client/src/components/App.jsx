@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import Amenity from './Amenity.jsx';
-import Description from './Description.jsx';
+import Amenity from './Amenity';
+import Description from './Description';
 
 class App extends React.Component {
   constructor(props) {
@@ -22,14 +22,13 @@ class App extends React.Component {
         });
       })
       .catch((err) => {
-        console.log(err);
+        throw err;
       });
   }
 
   render() {
-    // console.log(this.state);
-    const { amenity } = this.state.data;
-    const { description } = this.state.data;
+    const { data } = this.state;
+    const { amenity, description } = data;
     return (
       <div>
         <Description description={description} />
