@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import HighlightsList from './HighlightsList.jsx';
 
 const Description = (props) => {
   const { description } = props;
@@ -10,7 +11,7 @@ const Description = (props) => {
     );
   }
   const {
-    Occupancy, Bathrooms, Bedrooms, Beds,
+    Occupancy, Bathrooms, Bedrooms, Beds, Highlights,
   } = description;
   let guests = '';
   let bathrooms = '';
@@ -51,27 +52,41 @@ const Description = (props) => {
       <div className="listing-size">
         <div className="size guests">
           <span className="guests-count">{description.Occupancy}</span>
-          <span className="text">{guests}</span>
+          <span className="sizing-text">{guests}</span>
         </div>
         <div className="size bedrooms">
           <span className="bedrooms-count">{description.Bedrooms}</span>
-          <span className="text">{bedrooms}</span>
+          <span className="sizing-text">{bedrooms}</span>
         </div>
         <div className="size beds">
           <span className="beds-count">{description.Beds}</span>
-          <span className="text">{beds}</span>
+          <span className="sizing-text">{beds}</span>
         </div>
         <div className="size bathrooms">
           <span className="bathrooms-count">{description.Bathrooms}</span>
-          <span className="text">{bathrooms}</span>
+          <span className="sizing-text">{bathrooms}</span>
         </div>
       </div>
       <hr className="info-break" />
       <div className="highlights">
-        Some highlights
+        <HighlightsList highlights={Highlights} />
       </div>
       <hr className="info-break" />
       <div className="description">{description.Info}</div>
+      <div className="more-info">
+        <button className="show-more" type="button">
+          <div className="button-text">
+            <div>
+              Read more about the space
+            </div>
+            <i className="fas fa-chevron-down" />
+            {/* TODO
+              Implement drop down info with this button
+            <i class="fas fa-chevron-up"></i>
+            */}
+          </div>
+        </button>
+      </div>
       <hr className="info-break" />
     </div>
   );
