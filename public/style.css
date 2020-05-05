@@ -11,6 +11,7 @@
 .title-name {
   font-size: xx-large;
   font-weight: bold;
+  margin: 23px 0px;
 }
 
 .owner {
@@ -20,15 +21,16 @@
 }
 
 .owner-image {
-  height: 7vh;
-  width: 7vh;
-  min-height: 4vh;
-  min-width: 4vh;
+  height: 6vh;
+  width: 6vh;
+  min-height: 2.75rem;
+  min-width: 2.75rem;
   border-radius: 50%;
 }
 
 .listing-size {
   display: flex;
+  margin-bottom: 16px;
 }
 
 .size {
@@ -41,6 +43,10 @@
 
 .highlight-title {
   display: flex;
+}
+
+.highlights {
+  margin: 18px 0px;
 }
 
 .title-small {
@@ -86,6 +92,8 @@
 
 .highlight-text {
   margin-left: 35px;
+  margin-top: 5px;
+  margin-bottom: 19px;
 }
 
 .show-more {
@@ -95,14 +103,70 @@
   color: #008489;
   font-weight: bold;
   padding: 0px;
-  margin: 25px 0px;
 }
 
 .button-text {
   display: flex;
 }
 
+.show:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.hide:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .fa-chevron-down {
   margin-top: 3px;
   margin-left: 7px;
+}
+
+.fa-chevron-up {
+  margin-top: 3px;
+  margin-left: 7px;
+  text-decoration: none;
+}
+
+.location {
+  margin-bottom: 36px;
+}
+
+.description {
+  margin-top: 40px;
+  margin-bottom: 18px;
+  line-height: 22px;
+}
+
+.info-break {
+  background-color: #EBEBEB;
+  width: 100%;
+  height: 1px;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact {
+  font-size: inherit;
+  background-color: transparent;
+  border: none;
+  color: #008489;
+  font-weight: bold;
+  padding: 0px;
+  margin: 29px 0px;
+}
+
+.contact:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.moreInfo {
+  margin-bottom: 21px;
+  line-height: 22px;
 }

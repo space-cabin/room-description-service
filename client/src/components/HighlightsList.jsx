@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import HighlightsListEntry from './HighlightsListEntry.jsx';
+import HighlightsListEntry from './HighlightsListEntry';
 
 const HighlightsList = (props) => {
   const { highlights } = props;
