@@ -5,7 +5,7 @@ const HighlightsListEntry = (props) => {
   const { emblem, text, title } = props;
   if (emblem === undefined || text === undefined || title === undefined) {
     return (
-      <div>Unable to display component</div>
+      <div />
     );
   }
   return (

@@ -6,7 +6,7 @@ const HighlightsList = (props) => {
   const { highlights } = props;
   if (highlights === undefined) {
     return (
-      <div>Unable to return component</div>
+      <div />
     );
   }
   return (
