@@ -32,7 +32,7 @@ class Description extends React.Component {
 
     if (description === undefined) {
       return (
-        <div>missing page</div>
+        <div />
       );
     }
     const {
@@ -65,7 +65,7 @@ class Description extends React.Component {
     } else {
       beds = ' bed';
     }
-    if (clicked === true) {
+    if (clicked) {
       readMore = 'Hide';
       chevron = 'fas fa-chevron-up';
     } else {

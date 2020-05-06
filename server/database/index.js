@@ -19,6 +19,12 @@ const highlightSchema = new Schema({
   text: String,
 });
 
+const featureSchema = new Schema({
+  feature: String,
+  description: String,
+  emblem: String,
+});
+
 const DescriptionSchema = new Schema({
   listingId: Number,
   Title: String,
@@ -36,16 +42,16 @@ const DescriptionSchema = new Schema({
 
 const AmenitySchema = new Schema({
   listingId: Number,
-  Basic: [String],
-  FamilyFeatures: [String],
-  Facilities: [String],
-  Dining: [String],
-  GuestAccess: [String],
-  Logistics: [String],
-  BedAndBath: [String],
-  Outdoor: [String],
-  SafetyFeatures: [String],
-  NotIncluded: [String],
+  Basic: [featureSchema],
+  FamilyFeatures: [featureSchema],
+  Facilities: [featureSchema],
+  Dining: [featureSchema],
+  GuestAccess: [featureSchema],
+  Logistics: [featureSchema],
+  BedAndBath: [featureSchema],
+  Outdoor: [featureSchema],
+  SafetyFeatures: [featureSchema],
+  NotIncluded: [featureSchema],
 });
 
 const Descriptions = mongoose.model('Descriptions', DescriptionSchema);
