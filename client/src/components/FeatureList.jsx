@@ -2,15 +2,15 @@
 import React from 'react';
 import FeatureListEntry from './FeatureListEntry';
 
-const OutdoorList = (props) => {
-  const { amenities } = props;
+const FeatureList = (props) => {
+  const { amenities, className } = props;
   if (amenities === undefined) {
     return (
       <div />
     );
   }
   return (
-    <div className="outdoor-list">
+    <div className={className}>
       {amenities.map((amenity) => {
         const { feature, description, _id } = amenity;
         return (
@@ -21,4 +21,4 @@ const OutdoorList = (props) => {
   );
 };
 
-export default OutdoorList;
+export default FeatureList;

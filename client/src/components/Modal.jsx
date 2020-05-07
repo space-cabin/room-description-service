@@ -1,14 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import BasicList from './BasicList';
-import BedAndBathList from './BedAndBathList';
-import DiningList from './DiningList';
-import FacilitiesList from './FacilitiesList';
-import FamilyFeaturesList from './FamilyFeaturesList';
-import GuestAccessList from './GuestAccessList';
-import LogisticsList from './LogisticsList';
-import NotIncludedList from './NotIncludedList';
-import OutdoorList from './OutdoorList';
+import FeatureList from './FeatureList';
 
 const Modal = (props) => {
   const { amenity } = props;
@@ -27,50 +19,50 @@ const Modal = (props) => {
       Outdoor,
     } = amenity;
     return (
-      <div className={className} role="button" tabIndex={0} onClick={click} onKeyDown={click}>
+      <div className={className.concat(' shut-down')} role="button" tabIndex={0} onClick={click} onKeyDown={click}>
         <div className="modal-main">
           <div className="model-close">
             <button className="close" type="button" onClick={click}>
-              <div className="exit">X</div>
+              <div className="exit shut-down">X</div>
             </button>
           </div>
           <div className="modal-title">Amenities</div>
           <div className="modal-info">
             <div>
               <div className="feature-title">Basic</div>
-              <BasicList amenities={Basic} />
+              <FeatureList amenities={Basic} className="basic-list" />
             </div>
             <div>
               <div className="feature-title">Bed and Bath</div>
-              <BedAndBathList amenities={BedAndBath} />
+              <FeatureList amenities={BedAndBath} className="bed-and-bath-list" />
             </div>
             <div>
               <div className="feature-title">Dining</div>
-              <DiningList amenities={Dining} />
+              <FeatureList amenities={Dining} className="dining-list" />
             </div>
             <div>
               <div className="feature-title">Facilities</div>
-              <FacilitiesList amenities={Facilities} />
+              <FeatureList amenities={Facilities} className="facilities-list" />
             </div>
             <div>
               <div className="feature-title">Family Features</div>
-              <FamilyFeaturesList amenities={FamilyFeatures} />
+              <FeatureList amenities={FamilyFeatures} className="family-features-list" />
             </div>
             <div>
               <div className="feature-title">GuestAccess</div>
-              <GuestAccessList amenities={GuestAccess} />
+              <FeatureList amenities={GuestAccess} className="guest-access-list" />
             </div>
             <div>
               <div className="feature-title">Logistics</div>
-              <LogisticsList amenities={Logistics} />
+              <FeatureList amenities={Logistics} className="logistics-list" />
             </div>
             <div>
               <div className="feature-title">Outdoor</div>
-              <OutdoorList amenities={Outdoor} />
+              <FeatureList amenities={Outdoor} className="outdoor-list" />
             </div>
             <div>
               <div className="feature-title">Not Included</div>
-              <NotIncludedList amenities={NotIncluded} />
+              <FeatureList amenities={NotIncluded} className="not-included-list" />
             </div>
           </div>
         </div>
