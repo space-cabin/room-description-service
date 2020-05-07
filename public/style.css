@@ -209,7 +209,7 @@
 }
 
 .show-modal {
-  display: block;
+  display: flex;
   background-color: rgba(255, 255, 255, 0.75);
   z-index: 1;
   position: fixed;
@@ -217,6 +217,8 @@
   width: 100%;
   bottom: 0;
   left: 0;
+  justify-content: center;
+  overflow-y: auto;
 }
 
 .hide-modal {
@@ -226,12 +228,11 @@
 .modal-main {
   background-color: white;
   z-index: 2;
-  position: fixed;
-  height: 100%;
+  position: relative;
+  height: fit-content;
   max-width: 565px;
   width: 100%;
   top: 7%;
-  left: 34%;
   box-shadow: 0px 2px 8px 3px #e3e3e3;
   padding: 35px 30px;
 }
@@ -241,8 +242,6 @@
   border: none;
   padding: 0px;
 }
-
-
 
 .exit {
   font-size: x-large;
@@ -256,12 +255,20 @@
 }
 
 .feature-title {
+  margin-top: 35px;
   font-weight: bold;
 }
 
 .feature {
   display: flex;
-  margin: 25px 0px;
+  margin-top: 25px;
+  font-size: 17px;
+}
+
+.feature-description {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  font-size: 14px;
 }
 
 .am-cols {

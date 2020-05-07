@@ -11,10 +11,19 @@ const FeatureList = (props) => {
   }
   return (
     <div className={className}>
-      {amenities.map((amenity) => {
+      {amenities.map((amenity, i) => {
         const { feature, description, _id } = amenity;
+        let stop = false;
+        if (i === amenities.length - 1) {
+          stop = true;
+        }
         return (
-          <FeatureListEntry key={_id} feature={feature} description={description} />
+          <FeatureListEntry
+            key={_id}
+            stop={stop}
+            feature={feature}
+            description={description}
+          />
         );
       })}
     </div>
