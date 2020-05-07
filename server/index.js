@@ -10,6 +10,10 @@ app.use(express.json());
 
 app.use('/:id', express.static(path.join(__dirname, '../public')));
 
+app.get('/', (req, res) => {
+  res.redirect(301, 'http://localhost:3000/index.html');
+});
+
 app.get('/listing/:id', (req, res) => {
   const { id } = req.params;
   const data = {};
