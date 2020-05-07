@@ -13,7 +13,12 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const listing = window.location.pathname.slice(1, window.location.pathname.length - 1);
+    let listing;
+    if (window.location.pathname === '/index.html/') {
+      listing = 0;
+    } else {
+      listing = window.location.pathname.slice(1, window.location.pathname.length - 1);
+    }
 
     axios.get(`/listing/${listing}`)
       .then((response) => {
