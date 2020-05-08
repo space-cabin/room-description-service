@@ -17,6 +17,15 @@ const FeatureList = (props) => {
         if (i === amenities.length - 1) {
           stop = true;
         }
+        if (className === 'not-included-list') {
+          return (
+            <FeatureListEntry
+              key={_id}
+              stop={stop}
+              feature={feature}
+            />
+          );
+        }
         return (
           <FeatureListEntry
             key={_id}
