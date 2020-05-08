@@ -34,6 +34,11 @@ class App extends React.Component {
   render() {
     const { data } = this.state;
     const { amenity, description } = data;
+    if (amenity === undefined || description === undefined) {
+      return (
+        null
+      );
+    }
     return (
       <div>
         <Description description={description} />
