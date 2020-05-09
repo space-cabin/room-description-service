@@ -2,6 +2,7 @@
 import React from 'react';
 
 const ShowMoreInfo = (props) => {
+  // console.log(props);
   const { handleClick, moreInfo } = props;
   const {
     readMore,

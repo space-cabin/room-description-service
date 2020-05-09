@@ -6,7 +6,7 @@ const HighlightsList = (props) => {
   const { highlights } = props;
   if (highlights === undefined) {
     return (
-      <div />
+      null
     );
   }
   return (
@@ -25,7 +25,7 @@ const HighlightsList = (props) => {
           );
         }
         return (
-          <div />
+          null
         );
       })}
     </div>
