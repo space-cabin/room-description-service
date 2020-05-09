@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import HighlightsList from './HighlightsList';
-import ShowMoreInfo from './MoreInfo';
+import ShowMoreInfo from './ShowMoreInfo';
 
 class Description extends React.Component {
   constructor(props) {

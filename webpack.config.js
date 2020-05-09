@@ -13,6 +13,19 @@ module.exports = {
         exclude: /node_modules/,
         use: 'babel-loader',
       },
+      {
+        test: /\.css$/i,
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: { auto: true },
+            },
+          },
+        ],
+      },
     ],
   },
   mode: 'developement',
