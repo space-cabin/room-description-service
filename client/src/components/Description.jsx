@@ -29,7 +29,6 @@ class Description extends React.Component {
 
   render() {
     const { description } = this.props;
-
     const {
       Occupancy, Bathrooms, Bedrooms, Beds, Highlights, MoreInfo,
     } = description;

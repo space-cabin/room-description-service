@@ -22,15 +22,15 @@ class App extends React.Component {
           SafetyFeatures: [],
         },
         description: {
-          Bathrooms: undefined,
-          Bedrooms: undefined,
-          Beds: undefined,
+          Bathrooms: null,
+          Bedrooms: null,
+          Beds: null,
           Highlights: [],
           Image: '',
           Info: '',
           Location: '',
           MoreInfo: '',
-          Occupancy: undefined,
+          Occupancy: null,
           Owner: '',
           Title: '',
         },
@@ -47,9 +47,9 @@ class App extends React.Component {
     }
 
     axios.get(`/description/${listing}`)
-      .then((response) => {
+      .then(({ data }) => {
         this.setState({
-          data: response.data,
+          data,
         });
       })
       .catch((err) => {
@@ -58,8 +58,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { data } = this.state;
-    const { amenity, description } = data;
+    const { amenity, description } = this.state.data;
     return (
       <div>
         <Description description={description} />

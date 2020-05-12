@@ -31,7 +31,6 @@ class Amenity extends React.Component {
 
   render() {
     const { amenity } = this.props;
-    // console.log(amenity);
     const { clicked } = this.state;
     let count = 0;
     let modal = '';

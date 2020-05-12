@@ -16,18 +16,18 @@ app.get('/', (req, res) => {
 
 app.get('/description/:id', (req, res) => {
   const { id } = req.params;
-  const data = {};
+  let data = {};
   db.Descriptions.findOne({ listingId: id })
     .then((description) => {
-      data.description = description;
-    })
-    .then(
       db.Amenities.findOne({ listingId: id })
         .then((amenity) => {
-          data.amenity = amenity;
+          data = {
+            amenity,
+            description
+          }
           res.send(data);
-        }),
-    )
+        })
+    })
     .catch((err) => res.status(500).send(err));
 });
 
