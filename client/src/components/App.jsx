@@ -20,7 +20,7 @@ class App extends React.Component {
       listing = window.location.pathname.slice(1, window.location.pathname.length - 1);
     }
 
-    axios.get(`/listing/${listing}`)
+    axios.get(`/description/${listing}`)
       .then((response) => {
         this.setState({
           data: response.data,
