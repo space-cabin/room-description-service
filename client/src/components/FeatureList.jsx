@@ -4,11 +4,6 @@ import FeatureListEntry from './FeatureListEntry';
 
 const FeatureList = (props) => {
   const { amenities, className } = props;
-  if (amenities === undefined) {
-    return (
-      <div />
-    );
-  }
   return (
     <div className={className}>
       {amenities.map((amenity, i) => {

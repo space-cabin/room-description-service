@@ -1,6 +1,6 @@
 const faker = require('faker');
-// const fs = require('fs');
-// const axios = require('axios');
+const fs = require('fs');
+const axios = require('axios');
 const db = require('./server/database/index.js');
 
 const descriptionGenerator = () => {
@@ -113,8 +113,8 @@ const amenityGenerator = () => {
   }
 };
 
-descriptionGenerator();
-amenityGenerator();
+// descriptionGenerator();
+// amenityGenerator();
 // eslint-disable-next-line spaced-comment
 //***********ONLY USED TO POPULATE IMAGES TO UPLOAD TO S3************//
 
@@ -124,7 +124,7 @@ amenityGenerator();
 //     url: "https://loremflickr.com/320/240/dogs",
 //     responseType: 'stream',
 //   }).then((response) => {
-//     response.data.pipe(fs.createWriteStream(`../../../Pictures/hr/FEC/images/${n}.jpg`));
+//     response.data.pipe(fs.createWriteStream(`../../../../Pictures/hr/FEC/images/${n}.jpg`));
 //   }).catch((err) => {
 //     console.log(err);
 //   });

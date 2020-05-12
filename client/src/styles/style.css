@@ -286,3 +286,7 @@
   padding-top: 4px;
   margin-left: 7px;
 }
+
+.not-included-list {
+  text-decoration: line-through;
+}

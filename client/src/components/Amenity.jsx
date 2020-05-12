@@ -35,22 +35,20 @@ class Amenity extends React.Component {
     const { clicked } = this.state;
     let count = 0;
     let modal = '';
-    if (amenity !== undefined) {
-      const {
-        Basic,
-        BedAndBath,
-        Dining,
-        Facilities,
-        FamilyFeatures,
-        GuestAccess,
-        Logistics,
-        NotIncluded,
-        Outdoor,
-      } = amenity;
-      count += Basic.length + BedAndBath.length + Dining.length + Facilities.length;
-      count += GuestAccess.length + Logistics.length + NotIncluded.length + Outdoor.length;
-      count += FamilyFeatures.length;
-    }
+    const {
+      Basic,
+      BedAndBath,
+      Dining,
+      Facilities,
+      FamilyFeatures,
+      GuestAccess,
+      Logistics,
+      NotIncluded,
+      Outdoor,
+    } = amenity;
+    count += Basic.length + BedAndBath.length + Dining.length + Facilities.length;
+    count += GuestAccess.length + Logistics.length + NotIncluded.length + Outdoor.length;
+    count += FamilyFeatures.length;
     if (clicked) {
       modal = 'show-modal';
     } else {
@@ -58,21 +56,19 @@ class Amenity extends React.Component {
     }
     const selectedEmblems = [];
     const selectedAmenities = [];
-    if (amenity !== undefined) {
-      for (const item in amenity) {
-        if (typeof amenity[item] === 'object') {
-          amenity[item].forEach((feature) => {
-            if (!selectedEmblems.includes(feature.emblem) && selectedEmblems.length < 4) {
-              selectedEmblems.push(feature.emblem);
-            }
-            if (!selectedAmenities.includes(feature.feature) && selectedAmenities.length < 4) {
-              selectedAmenities.push(feature.feature);
-            }
-          });
-        }
-        if (selectedAmenities.length === 4 && selectedEmblems.length === 4) {
-          break;
-        }
+    for (const item in amenity) {
+      if (typeof amenity[item] === 'object') {
+        amenity[item].forEach((feature) => {
+          if (!selectedEmblems.includes(feature.emblem) && selectedEmblems.length < 4) {
+            selectedEmblems.push(feature.emblem);
+          }
+          if (!selectedAmenities.includes(feature.feature) && selectedAmenities.length < 4) {
+            selectedAmenities.push(feature.feature);
+          }
+        });
+      }
+      if (selectedAmenities.length === 4 && selectedEmblems.length === 4) {
+        break;
       }
     }
     if (!selectedEmblems[0] || !selectedEmblems[1] || !selectedEmblems[2] || !selectedEmblems[3]) {

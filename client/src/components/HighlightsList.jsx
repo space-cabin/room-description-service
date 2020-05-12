@@ -4,11 +4,6 @@ import HighlightsListEntry from './HighlightsListEntry';
 
 const HighlightsList = (props) => {
   const { highlights } = props;
-  if (highlights === undefined) {
-    return (
-      null
-    );
-  }
   return (
     <div className="highlightsList">
       {highlights.map((highlight) => {
@@ -24,9 +19,6 @@ const HighlightsList = (props) => {
             />
           );
         }
-        return (
-          null
-        );
       })}
     </div>
   );

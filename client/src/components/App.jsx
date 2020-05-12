@@ -8,7 +8,33 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      data: {},
+      data: {
+        amenity: {
+          Basic: [],
+          BedAndBath: [],
+          Dining: [],
+          Facilities: [],
+          FamilyFeatures: [],
+          GuestAccess: [],
+          Logistics: [],
+          NotIncluded: [],
+          Outdoor: [],
+          SafetyFeatures: [],
+        },
+        description: {
+          Bathrooms: undefined,
+          Bedrooms: undefined,
+          Beds: undefined,
+          Highlights: [],
+          Image: '',
+          Info: '',
+          Location: '',
+          MoreInfo: '',
+          Occupancy: undefined,
+          Owner: '',
+          Title: '',
+        },
+      },
     };
   }
 
@@ -34,11 +60,6 @@ class App extends React.Component {
   render() {
     const { data } = this.state;
     const { amenity, description } = data;
-    if (amenity === undefined || description === undefined) {
-      return (
-        null
-      );
-    }
     return (
       <div>
         <Description description={description} />
