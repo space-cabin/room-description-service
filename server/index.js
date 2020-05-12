@@ -4,14 +4,14 @@ const db = require('./database/index.js');
 
 
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
 
 app.use(express.json());
 
 app.use('/:id', express.static(path.join(__dirname, '../public')));
 
 app.get('/', (req, res) => {
-  res.redirect(301, 'http://localhost:3000/index.html');
+  res.redirect(301, `http://localhost:${PORT}/index.html`);
 });
 
 app.get('/listing/:id', (req, res) => {
