@@ -104,6 +104,7 @@ class Amenity extends React.Component {
         <button className="show-amenities" type="button" onClick={this.handleClick}>
           {`Show all ${count} amenities`}
         </button>
+        <div className="info-break" />
       </div>
     );
   }
