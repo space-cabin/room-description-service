@@ -8,7 +8,7 @@ const PORT = 3001;
 
 app.use(express.json());
 
-app.use('/:id', express.static(path.join(__dirname, '../public')));
+app.use('/:id', express.static(path.join(__dirname, '..', 'public')));
 
 app.get('/', (req, res) => {
   res.redirect(301, `http://localhost:${PORT}/index.html`);
@@ -31,4 +31,4 @@ app.get('/description/:id', (req, res) => {
     .catch((err) => res.status(500).send(err));
 });
 
-app.listen(PORT);
+app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
