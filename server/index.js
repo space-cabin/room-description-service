@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
   res.redirect(301, `http://localhost:${PORT}/index.html`);
 });
 
-app.get('/listing/:id', (req, res) => {
+app.get('/description/:id', (req, res) => {
   const { id } = req.params;
   const data = {};
   db.Descriptions.findOne({ listingId: id })
