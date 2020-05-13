@@ -1,16 +1,9 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/overview', { useNewUrlParser: true });
+mongoose.connect('mongodb://database/overview', { useNewUrlParser: true });
 const { connection } = mongoose;
 
 const { Schema } = mongoose;
-
-// {
-//   boolean: Boolean,
-//   emblem: String,
-//   title: String,
-//   text: String,
-// }
 
 const highlightSchema = new Schema({
   boolean: Boolean,
