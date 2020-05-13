@@ -1,6 +1,6 @@
 const faker = require('faker');
-const fs = require('fs');
-const axios = require('axios');
+// const fs = require('fs');
+// const axios = require('axios');
 const db = require('./server/database/index.js');
 
 const descriptionGenerator = () => {
@@ -113,15 +113,15 @@ const amenityGenerator = () => {
   }
 };
 
-// descriptionGenerator();
-// amenityGenerator();
+descriptionGenerator();
+amenityGenerator();
 // eslint-disable-next-line spaced-comment
 //***********ONLY USED TO POPULATE IMAGES TO UPLOAD TO S3************//
 
 // const images = (n) => {
 //   axios({
 //     method: 'get',
-//     url: "https://loremflickr.com/320/240/dogs",
+//     url: "https://loremflickr.com/320/240/cats",
 //     responseType: 'stream',
 //   }).then((response) => {
 //     response.data.pipe(fs.createWriteStream(`../../../../Pictures/hr/FEC/images/${n}.jpg`));
