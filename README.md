@@ -1,13 +1,13 @@
-# Project Name
+# Space Cabin
 
-> Project description
+> Open source room reservation application.
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/space-cabin/room-description-service
+  - https://github.com/space-cabin/Evan-Service-Reservations
+  - https://github.com/space-cabin/reviews
+  - https://github.com/space-cabin/PhotoGallery
 
 ## Table of Contents
 
