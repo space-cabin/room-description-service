@@ -10,14 +10,15 @@
   - https://github.com/space-cabin/PhotoGallery
 
 ## Table of Contents
-
+1. [Introduction](#Introduction)
 1. [Usage](#Usage)
 1. [Requirements](#requirements)
 1. [Development](#development)
 
-## Usage
+## Introduction
 
-> Some usage instructions
+A description module for a single product feature page built using React, Express, and MongoDB.
+This module was designed for use with [Related Projects](#Related Projects) in conjunction with a proxy server 
 
 ## Requirements
 
@@ -25,6 +26,26 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 - Node 6.13.0
 - etc
+
+MongoDB is required to run this application, so make sure it has been installed:
+https://docs.mongodb.com/manual/installation/
+
+## Usage
+
+To test or use application it will need to be seeded, to seed run:
+
+```sh
+npm run seed
+```
+
+To start application, from project root:
+
+```sh
+npm start
+```
+
+Navigate between 127.0.0.1:3001/0 or localhost:3001/0 and 127.0.0.1:3001/99 or localhost:3001/99 to view dynamically rendered poduct description pages
+
 
 ## Development
 
@@ -36,4 +57,3 @@ From within the root directory:
 npm install -g webpack
 npm install
 ```
-
