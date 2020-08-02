@@ -4,21 +4,20 @@
 
 ## Related Projects
 
-  - https://github.com/space-cabin/room-description-service
   - https://github.com/space-cabin/Evan-Service-Reservations
   - https://github.com/space-cabin/reviews
   - https://github.com/space-cabin/PhotoGallery
 
 ## Table of Contents
-1. [Introduction](#Introduction)
-1. [Usage](#Usage)
+1. [Introduction](#introduction)
+1. [Usage](#usage)
 1. [Requirements](#requirements)
 1. [Development](#development)
 
 ## Introduction
 
 A description module for a single product feature page built using React, Express, and MongoDB.
-This module was designed for use with [Related Projects](#Related Projects) in conjunction with a proxy server 
+This module was designed for use with [Related Projects](#related_projects) in conjunction with a proxy server 
 
 ## Requirements
 
